@@ -73,6 +73,28 @@
   }
 
   // Your custom JavaScript goes here
+  
 
 
 })();
+function viewchapter(classname,i){
+        $('.chapter').hide();
+        $(classname).show();
+        $('.sidebar ul').removeClass('isOpen');
+        i.addClass('isOpen');
+        $('.drawer-handle').removeClass('open');
+          $('.sidebar').removeClass('open');
+          isDrawerOpen = !isDrawerOpen;
+      }
+      isDrawerOpen = true;
+      function opendrawer(i){
+        isDrawerOpen = !isDrawerOpen;
+        if(isDrawerOpen){
+          i.removeClass('open');
+          $('.sidebar').removeClass('open');
+        }else{
+          i.addClass('open');
+          $('.sidebar').addClass('open');
+        }
+        
+      }
